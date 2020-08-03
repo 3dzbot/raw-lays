@@ -1,0 +1,6 @@
+.idea
+.svn
+node_modules
+compiled
+files/
+package-lock.json

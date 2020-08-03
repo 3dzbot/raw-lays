@@ -1,0 +1,130 @@
+html.fixed,
+html.fixed body {
+    overflow: hidden;
+}
+img{vertical-align: top;}
+body{
+    position: relative;
+    overflow: hidden;
+    font-family: $GothamPro;
+    color: #fff;
+    background: #1d2343;
+}
+.container {
+    margin-left: 34px;
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: calc(100vw - 20px);
+        margin: 0 auto;
+    }
+}
+@media (max-width: 320px) {
+    body {
+        overflow: auto;
+    }
+    .container {
+        max-width: calc(100vw - 20px);
+        margin: 0 auto;
+    }
+}
+.page{
+    position: relative;
+    overflow: hidden;
+    .block{
+        position: relative;
+        .content{
+            margin: auto;
+        }
+    }
+}
+p { margin: 0; }
+svg path {transition: fill .3s linear;}
+select {
+    cursor: pointer;
+    transition: $link-hover-transition;
+    &:hover {  color: $hover-color;  }
+}
+
+@media (max-width: 1610px) {
+    .container {
+        //max-width: calc(100vw - 60px);
+    }
+}
+.section-title {
+    //font-weight: bold;
+    //font-size: 36px;
+    //line-height: 44px;
+}
+@media (max-width: 768px) {
+    .container {
+        //max-width: calc(100vw - 20px);
+    }
+    .section-title {
+        //font-size: calc(36px + (36 - 18) * (100vw - 768px) / (768 - 320));
+        //line-height: calc(44px + (44 - 22) * (100vw - 768px) / (768 - 320));
+    }
+}
+.section-header-title {
+    //display: flex;
+    //justify-content: space-between;
+    //align-items: center;
+    //margin-bottom: 40px;
+}
+@media (max-width: 1378px) {
+    .section-header-title {
+        //margin-bottom: calc(40px + (40 - 27) * (100vw - 1378px) / (1378 - 320));
+    }
+}
+.section-header-link {
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    //width: 180px;
+    //height: 55.38px;
+    //font-weight: 500;
+    //font-size: 14px;
+    //line-height: 17px;
+    //color: $primary-color;
+    //border: 1px solid $primary-color;
+    //border-radius: 5px;
+    //transition: background-color .1s linear, color .1s linear;
+    //&:hover {
+    //    background: $primary-color;
+    //    color: #fff;
+    //}
+}
+.section-header-bottom-link {
+    //display: none;
+    //margin: 20px auto 0;
+}
+@media (max-width: 768px) {
+    .catalog-products {
+        .section-header-bottom-link {
+            //display: flex;
+        }
+    }
+}
+@media (max-width: 660px) {
+    .section-header-link {
+        //display: none;
+    }
+    .section-header-bottom-link {
+        //display: flex;
+    }
+}
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.unselectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}

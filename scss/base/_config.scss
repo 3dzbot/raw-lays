@@ -1,0 +1,32 @@
+$primary-color: #ffe600;
+$hover-color: #777DA7;
+$svg-color: #252737;
+$link-hover-transition: color .3s linear;
+
+//&.active {
+//	&:after { transform: scale(1); }
+//}
+//&:after {
+//	@extend %border-bottom-after;
+//}
+%border-bottom-after {
+	display: block;
+	content: '';
+	height: 1px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	background: $hover-color;
+	transition: transform .3s linear;
+	transform: scale(0);
+}
+%swiper-pagination-bullet {
+	display: none;
+	width: 14px;
+	height: 3px;
+	border-radius: 0;
+	&:not(:last-child) {
+		margin-right: 8px;
+	}
+}
