@@ -14,7 +14,7 @@ if(!empty($subdir)){
 	$request = $_SERVER['REQUEST_URI'];
 }
 //var_dump($request);
-if($request === '/') $request = '/main-prev';
+if($request === '/') $request = '/main';
 $path = 'pages/'.$request.'.php';
 //var_dump($request);
 
