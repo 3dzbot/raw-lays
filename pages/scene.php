@@ -1,7 +1,7 @@
-<header class="header header-main">
+<header class="header header-scene">
     <div class="container">
         <a class="logo" href="#">
-            <img src="./images/header/logo.png" alt="смотрим финал лиги чемпионов вместе с лейс и пепси">
+            <img src="./images/header/logo-scene.png" alt="смотрим финал лиги чемпионов вместе с лейс и пепси">
         </a>
         <div class="register-wrapper">
             <a href="#" class="header-home-link">
@@ -18,79 +18,25 @@
         </div>
     </div>
 </header>
-<main id="main-page">
-    <section class="main-row">
-        <div class="main-column main-square">
-            <div class="bg-main-top">
-                <img src="./images/main/bg-top.jpg" alt="мероприятие в честь финала лиги чемпионов">
-            </div>
-            <div class="bg-prise">
-                <img src="./images/main/prise.png" alt="мероприятие в честь финала лиги чемпионов 2">
-            </div>
-            <div class="bg-main-bottom">
-                <img src="./images/main/bg-bottom.png" alt="мероприятие в честь финала лиги чемпионов 3">
-            </div>
-            <div class="container">
-                <div class="main-square-title">23 августа!</div>
-                <div class="main-square-subtitle">Смотрим Финал Лиги чемпионов <br>
-                    вместе с LAY`S и Pepsi в Лужниках!</div>
-                <div class="main-square-text">Специальные гости: Егор Крид и Клава Кока</div>
-                <a href="<?= $site_url ?>registration" class="main-square-registration">Регистрация</a>
+<main id="scene-page">
+    <div class="scene-row">
+        <div class="scene-column scene-left">
+            <h1 class="scene-title"><span class="scene-title-start">Специальные гости</span> <span class="scene-title-middle">мероприятия</span>
+                Егор Крид и Клава Кока
+            </h1>
+            <div class="scene-content">
+                <p>В этот вечер гости <span>LAY’S & PEPSI DRIVE PARK</span> увидят звезд не только <br> на футбольном поле, но и на сцене!</p>
+                <p>Раскачивать болельщиков и заводить трибуны будет музыкальная связка нападающих экстра-класса - звезда лейбла <span>Егор Крид и Black Star Клава Кока</span>.</p>
+                <p>Они сделают всё, чтобы разогреть ваш футбольный аппетит! Ведь Футбол вкуснее с Lay’s и Pepsi!</p>
             </div>
         </div>
-        <!-- /.main-column -->
-        <div class="main-column main-right">
-            <div class="elem-row">
-                <div class="elem-column">
-                    <div class="elem-img">
-                        <img src="./images/main/item1.png" alt="призы">
-                    </div>
-                    <div class="elem-wrapper">
-                        <div class="elem-title">забери</div>
-                        <div class="elem-subtitle">
-                            свой набор <br>
-                            болельщика
-                        </div>
-                    </div>
-                    <a href="" class="elem-link">Подробнее</a>
-                </div>
-                <div class="elem-column">
-                    <div class="elem-img">
-                        <img src="./images/main/item2.png" alt="специальные гости">
-                    </div>
-                    <div class="elem-wrapper">
-                        <div class="elem-title">Специальные <br>гости мероприятия</div>
-                        <div class="elem-subtitle">
-                            ЕГОР КрИД и КЛАВА КОКА
-                        </div>
-                    </div>
-                    <a href="<?= $site_url ?>scene" class="elem-link">Подробнее</a>
-                </div>
-                <div class="elem-column">
-                    <div class="elem-img">
-                        <img src="./images/main/item3.png" alt="специальные промокоды">
-                    </div>
-                    <div class="elem-wrapper">
-                        <div class="elem-title">ВЫИГРАЙ </div>
-                        <div class="elem-subtitle">промокод СИТИМОБИЛ <br>
-                            и LAY’S & PEPSI BOX!
-                        </div>
-                    </div>
-                    <a href="" class="elem-link">Подробнее</a>
-                </div>
-                <div class="elem-column">
-                    <div class="elem-wrapper">
-                        <div class="elem-title">Узнай </div>
-                        <div class="elem-subtitle">подробности <br>
-                            о мероприятии</div>
-                    </div>
-                    <a href="" class="elem-link">Подробнее</a>
-                </div>
-            </div>
+        <!-- /.scene-column -->
+        <div class="scene-column scene-right">
+            <img src="./images/scene/guests.png" alt="приглашенные гости Егор Крид и Кока">
         </div>
-        <!-- /.main-column -->
-    </section>
-    <!-- /.main-row -->
+        <!-- /.scene-column -->
+    </div>
+    <!-- /.scene-row -->
 </main>
-
-
+<!-- /#scene-page -->
+<?php require 'pages/section/bottom.php'; ?>
