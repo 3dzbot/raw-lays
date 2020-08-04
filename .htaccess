@@ -11,7 +11,7 @@ RewriteRule . /raws/lays/index.php [L]
 #RewriteEngine On
 #RewriteBase /raws/kabare
 #RewriteRule ^index\.php$ - [L]
-#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-fz
 #RewriteCond %{REQUEST_FILENAME} !-d
 #RewriteRule . /raws/kabare/index.php [L]
 #</IfModule>

@@ -1,0 +1,114 @@
+.header-registration {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  background: transparent;
+}
+#registration-page {
+  flex-grow: 1;
+  background: url("./images/registration/bg.jpg") center / cover no-repeat;
+  display: flex;
+  .container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.subtitle-reg {
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 198px;
+}
+.title-reg {
+  font-size: 77px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 66px;
+  text-align: center;
+  span {
+    color: #ea0a2a;
+  }
+}
+.form-reg-wrap {
+  width: 100%;
+  max-width: 750px;
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  input,
+  select,
+  button {
+    color: #000;
+    background: #fce53b;
+    margin-bottom: 33px;
+    padding: 18px 30px;
+    border-radius: 26px;
+  }
+  button {
+    font-size: 24px;
+    text-transform: uppercase;
+    background: #ea0a2a;
+    color: #fff;
+  }
+}
+.form-reg-top-wrap,
+.form-reg-bot-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  input, select {
+    flex-basis: 45%;
+  }
+}
+.reg-checked {
+  margin-bottom: 33px;
+  input {
+    margin-bottom: 0;
+  }
+  display: none;
+  line-height: 1;
+}
+@media (max-width: 1368px) {
+  .subtitle-reg {
+    margin-top: calc(198px + (198 - 178) * (100vw - 1368px) / (1368 - 320));
+    font-size: calc(48px + (48 - 38) * (100vw - 1368px) / (1368 - 320));
+  }
+  .title-reg {
+    font-size: calc(77px + (77 - 27) * (100vw - 1368px) / (1368 - 320));
+  }
+  .form-reg-wrap {
+    button {
+      font-size: calc(24px + (24 - 12) * (100vw - 1368px) / (1368 - 320));
+    }
+  }
+}
+@media (max-width: 768px) {
+  .reg-checked {
+    display: block;
+  }
+}
+@media (max-width: 550px) {
+  .form-reg-top-wrap,
+  .form-reg-bot-wrap {
+    display: flex;
+    flex-direction: column;
+    input, select {
+      flex-basis: 100%;
+    }
+  }
+  .form-reg-wrap {
+    button {
+      width: 100%;
+      border-radius: 26px;
+    }
+  }
+}

@@ -7,6 +7,7 @@ $subdir = trim(substr($script_dir1, strlen($script_dir2)), "/\\");
 $request_scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
 
 $site_url = $request_scheme.'://'.$_SERVER['HTTP_HOST'].'/';
+
 if(!empty($subdir)){
 	$site_url .= $subdir.'/';
 	$request = substr($_SERVER['REQUEST_URI'], strlen('/'.$subdir));

@@ -1,4 +1,4 @@
-<header class="header header-main">
+<header class="header header-registration">
     <div class="container">
         <a class="logo" href="#">
             <img src="./images/header/logo.png" alt="смотрим финал лиги чемпионов вместе с лейс и пепси">
@@ -18,79 +18,65 @@
         </div>
     </div>
 </header>
-<main id="main-page">
-    <section class="main-row">
-        <div class="main-column main-square">
-            <div class="bg-main-top">
-                <img src="./images/main/bg-top.jpg" alt="мероприятие в честь финала лиги чемпионов">
-            </div>
-            <div class="bg-prise">
-                <img src="./images/main/prise.png" alt="мероприятие в честь финала лиги чемпионов 2">
-            </div>
-            <div class="bg-main-bottom">
-                <img src="./images/main/bg-bottom.png" alt="мероприятие в честь финала лиги чемпионов 3">
-            </div>
-            <div class="container">
-                <div class="main-square-title">23 августа!</div>
-                <div class="main-square-subtitle">Смотрим Финал Лиги чемпионов <br>
-                    вместе с LAY`S и Pepsi в Лужниках!</div>
-                <div class="main-square-text">Специальные гости: Клава Кока и …</div>
-                <a href="<?= $site_url ?>registration" class="main-square-registration">Регистрация</a>
-            </div>
+<main id="registration-page">
+    <div class="container">
+        <div class="subtitle-reg">
+            регистрация
         </div>
-        <!-- /.main-column -->
-        <div class="main-column main-right">
-            <div class="elem-row">
-                <div class="elem-column">
-                    <div class="elem-img">
-                        <img src="./images/main/item1.png" alt="призы">
-                    </div>
-                    <div class="elem-wrapper">
-                        <div class="elem-title">забери</div>
-                        <div class="elem-subtitle">
-                            свой набор <br>
-                            болельщика
-                        </div>
-                    </div>
-                    <a href="" class="elem-link">Подробнее</a>
+        <h1 class="title-reg">
+            LAY’S<span>&</span>PEPSI DRIVE PARK
+        </h1>
+        <div class="form-reg-wrap">
+            <form action="#" method="post">
+                <div class="form-reg-top-wrap">
+                    <input type="text" name="first_name" placeholder="ФИО *" required>
+                    <input type="tel" name="phone" placeholder="+7 (000) 000 - 00 - 00" required>
                 </div>
-                <div class="elem-column">
-                    <div class="elem-img">
-                        <img src="./images/main/item2.png" alt="специальные гости">
-                    </div>
-                    <div class="elem-wrapper">
-                        <div class="elem-title">Клава Кока и …</div>
-                        <div class="elem-subtitle">
-                            Специальные гости <br> мероприятия
-                        </div>
-                    </div>
-                    <a href="" class="elem-link">Подробнее</a>
+                <input type="text" name="last_name" placeholder="Почтовый адрес">
+                <div class="form-reg-bot-wrap">
+                    <input type="text" name="last_name" placeholder="Дата рождеия *" required>
+                    <select>
+                        <option>Город участия </option>
+                        <option>Москва</option>
+                        <option>Питер</option>
+                        <option>Волгоград</option>
+                        <option>Владивосток</option>
+                    </select>
                 </div>
-                <div class="elem-column">
-                    <div class="elem-img">
-                        <img src="./images/main/item3.png" alt="специальные промокоды">
-                    </div>
-                    <div class="elem-wrapper">
-                        <div class="elem-title">ВЫИГРАЙ </div>
-                        <div class="elem-subtitle">промокод СИТИМОБИЛ <br>
-                            и LAY’S & PEPSI BOX!
-                        </div>
-                    </div>
-                    <a href="" class="elem-link">Подробнее</a>
-                </div>
-                <div class="elem-column">
-                    <div class="elem-wrapper">
-                        <div class="elem-title">Узнай </div>
-                        <div class="elem-subtitle">подробности <br>
-                            о мероприятии</div>
-                    </div>
-                    <a href="" class="elem-link">Подробнее</a>
-                </div>
-            </div>
+                <select>
+                    <option>Способ посещения мероприятия</option>
+                    <option>Пешком</option>
+                    <option>На автомобиле</option>
+                </select>
+                <label class="reg-checked">
+                    <input type="checkbox" value="terms" checked required> <span>Согласен с правилами проведения и обработкой персональных данных</span>
+                </label>
+                <button>Зарегистроваться</button>
+            </form>
         </div>
-        <!-- /.main-column -->
-    </section>
-    <!-- /.main-row -->
+    </div>
+    <!-- /.container -->
 </main>
-
-
+<!-- /#registration-page -->
+<footer class="footer">
+    <div class="bg-footer">
+        ​<picture>
+            <source srcset="./images/footer/ball-m.png" media="(max-width: 768px)">
+            <img src="./images/footer/ball.png" alt="присоединяйся к мероприятию">
+        </picture>
+    </div>
+    <div class="container">
+        <div class="footer-left">
+            <p>Ⓒ 2020 OOO «Фрито Лей Мануфактуринг». Все права защищены.</p>
+            <p>Телефон горячей линии: <a href="tel:88005007737">8 (800) 500 77 37</a></p>
+            <p>Звонки по России бесплатно, ежедневно с 9:00 до 21:00 (МСК)</p>
+        </div>
+        <div class="footer-right">
+            <a href="<?= $site_url ?>contacts" class="footer-link">ОБРАТНАЯ СВЯЗЬ</a>
+            <a href="<?= $site_url ?>assets/doc/pravila.docx" class="footer-link" download>ПРАВИЛА АКЦИИ</a>
+            <a href="<?= $site_url ?>assets/doc/dogovor.docx" class="footer-link" download>ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</a>
+        </div>
+    </div>
+    <!-- /.container -->
+</footer>
+<!-- /.footer -->

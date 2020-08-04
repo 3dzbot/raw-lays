@@ -64,33 +64,51 @@ header {
 }
 
 @media (max-width: 768px) {
-  .header {
+  header {
     height: calc(100px + (100 - 50) * (100vw - 1868px) / (1868 - 320));
   }
   .logo {
     width: calc(200px + (200 - 120) * (100vw - 1868px) / (1868 - 320));
   }
   .header-home-link {
-    width: calc(44px + (44 - 22) * (100vw - 1868px) / (1868 - 320));
-    height: calc(44px + (44 - 22) * (100vw - 1868px) / (1868 - 320));
+    //width: calc(44px + (44 - 22) * (100vw - 1868px) / (1868 - 320));
+    //height: calc(44px + (44 - 22) * (100vw - 1868px) / (1868 - 320));
     svg {
       width: 50%;
       height: 50%;
     }
   }
   .registration-btn {
-    padding: calc(16px + (16 - 8) * (100vw - 1868px) / (1868 - 320)) calc(46px + (46 - 12) * (100vw - 1868px) / (1868 - 320));
-    border-radius: calc(23px + (23 - 12) * (100vw - 1868px) / (1868 - 320));
+    //padding: calc(16px + (16 - 8) * (100vw - 1868px) / (1868 - 320)) calc(46px + (46 - 12) * (100vw - 1868px) / (1868 - 320));
+    //border-radius: calc(23px + (23 - 12) * (100vw - 1868px) / (1868 - 320));
   }
   .header-contacts-link {
     display: inline-block;
     svg {
-      width: calc(44px + (44 - 22) * (100vw - 1868px) / (1868 - 320));
-      height: calc(44px + (44 - 22) * (100vw - 1868px) / (1868 - 320));
+      //width: calc(44px + (44 - 22) * (100vw - 1868px) / (1868 - 320));
+      //height: calc(44px + (44 - 22) * (100vw - 1868px) / (1868 - 320));
     }
   }
   .registration-btn,
   .header-contacts-link {
     margin-left: calc(28px + (28 - 5) * (100vw - 1868px) / (1868 - 320));
+  }
+}
+@media (max-width: 550px) {
+  header {
+    padding-top: 14px;
+    height: auto;
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .logo {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+  .register-wrapper {
+    justify-content: space-between;
+    width: 100%;
   }
 }
