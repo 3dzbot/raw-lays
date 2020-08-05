@@ -12,6 +12,9 @@ body{
     display: flex;
     flex-direction: column;
 }
+picture {
+    text-align: center;
+}
 .container {
     max-width: calc(100% - 80px);
     margin: 0 auto;

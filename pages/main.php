@@ -52,7 +52,7 @@
                             болельщика
                         </div>
                     </div>
-                    <a href="" class="elem-link">Подробнее</a>
+                    <a href="<?= $site_url ?>gift" class="elem-link">Подробнее</a>
                 </div>
                 <div class="elem-column">
                     <div class="elem-img">

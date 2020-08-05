@@ -27,7 +27,7 @@
             LAY’S<span>&</span>PEPSI DRIVE PARK
         </h1>
         <div class="form-reg-wrap">
-            <form action="#" method="post">
+            <form action="./assets/send.php" method="post">
                 <div class="form-reg-top-wrap">
                     <input type="text" name="first_name" placeholder="ФИО *" required>
                     <input type="tel" name="phone" placeholder="+7 (000) 000 - 00 - 00" required>
