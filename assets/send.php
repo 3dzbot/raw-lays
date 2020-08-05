@@ -38,7 +38,7 @@ $headers = 'Content-type: text/plain; charset="utf-8"';
 	$headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 	// Отправляем
 	mail($to, $subject, $message, $headers);
-	header("Location: /raws/lays/thanks");
+	header("Location: http://a0459647.xsph.ru/thanks");
 
 
 

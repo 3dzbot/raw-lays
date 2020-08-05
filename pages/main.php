@@ -84,7 +84,7 @@
                         <div class="elem-subtitle">подробности <br>
                             о мероприятии</div>
                     </div>
-                    <a href="" class="elem-link">Подробнее</a>
+                    <a href="<?= $site_url ?>fanpark" class="elem-link">Подробнее</a>
                 </div>
             </div>
         </div>
