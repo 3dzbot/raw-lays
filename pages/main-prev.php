@@ -28,6 +28,16 @@
                     <div class="header-item-img">
                         <img src="./images/prev/item.png" alt="предварительная страница">
                     </div>
+<!--                    <div class="header-prev-title">-->
+<!--                        <p class="header-prev-title__yellow">Футбол</p>-->
+<!--                        <p class="header-prev-subtitle">вкуснее</p>-->
+<!--                        <p class="header-prev-subtitle">с lay's и pepsi</p>-->
+<!--                    </div>-->
+<!--                    <div class="header-prev-title-mobile">-->
+<!--                        <p class="header-prev-title-mobile__yellow">23 августа!</p>-->
+<!--                        <p class="header-prev-mobile-subtitle">Смотрим финал лиги чемпионов</p>-->
+<!--                        <p class="header-prev-mobile-subtitle">вместе с <span>lay's и pepsi в лужниках!</span></p>-->
+<!--                    </div>-->
                     <!-- /.header-prev-title -->
                 </div>
                 <!-- /.header-prev-row -->
@@ -69,11 +79,11 @@
             <div class="description-number"><span id="seconds">44</span></div>
         </div>
     </div>
+    <div>
+        <a href="<?= $site_url ?>assets/doc/dogovor.docx" class="license-doc" download>Пользовательское соглашение</a>
+    </div>
             </div>
             <div class="main-prev-row main-prev-footer">
-                <p>успаей припарковаться</p>
-                <p class="main-prev-footer__yellow">в LAY'S & PEPSI DRIVE PARK </p>
-                <p class="main-prev-footer__yellow">с 7 по 23 августа</p>
             </div>
         </div>
         <!-- /.main-prev-row -->

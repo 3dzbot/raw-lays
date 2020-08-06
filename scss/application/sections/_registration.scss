@@ -23,14 +23,14 @@
   color: #000;
   font-weight: bold;
   margin-bottom: 10px;
-  margin-top: 198px;
+  margin-top: 128px;
 }
 .title-reg {
   font-size: 77px;
   text-transform: uppercase;
   font-weight: bold;
   color: #000;
-  margin-bottom: 66px;
+  margin-bottom: 46px;
   text-align: center;
   span {
     color: #ea0a2a;
@@ -44,14 +44,51 @@
     display: flex;
     flex-direction: column;
   }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  input, select {
+    font-size: 24px;
+    color: #252525;
+    display: inline-block;
+  }
+  input,
+  .way_of_visiting-wrap,
+  .select-city-wrap,
+  button {
+    margin-bottom: 16px;
+  }
   input,
   select,
   button {
     color: #000;
     background: #fce53b;
-    margin-bottom: 33px;
-    padding: 18px 30px;
+    padding: 14px 30px;
     border-radius: 26px;
+  }
+  input::placeholder,
+  input::-webkit-input-placeholder,
+  select {
+    color: #252525;
+  }
+  .select-city-wrap,
+  .way_of_visiting-wrap {
+    position: relative;
+    &:after {
+      content: "▼";
+      //font-size: 12px;
+      position: absolute;
+      color: #000;
+      right: 32px;
+      top: 22px;
+      z-index: 2;
+    }
+    select {
+      width: 100%;
+    }
   }
   button {
     font-size: 24px;
@@ -60,12 +97,16 @@
     color: #fff;
   }
 }
+.registration-submit {
+  margin-top: 20px;
+}
 .form-reg-top-wrap,
 .form-reg-bot-wrap {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  input, select {
+  input,
+  .select-city-wrap {
     flex-basis: 45%;
   }
 }
@@ -86,14 +127,30 @@
     font-size: calc(77px + (77 - 27) * (100vw - 1368px) / (1368 - 320));
   }
   .form-reg-wrap {
+    .select-city-wrap,
+    .way_of_visiting-wrap {
+      &:after {
+        top: 18px;
+      }
+    }
     button {
       font-size: calc(24px + (24 - 12) * (100vw - 1368px) / (1368 - 320));
+    }
+  }
+  .form-reg-wrap {
+    input, select {
+      font-size: calc(24px + (24 - 14) * (100vw - 1368px) / (1368 - 320));
     }
   }
 }
 @media (max-width: 768px) {
   .reg-checked {
     display: block;
+  }
+  .g-recaptcha {
+    overflow: hidden!important;
+    width: auto!important;
+    max-width: 100%!important;
   }
 }
 @media (max-width: 550px) {
@@ -112,3 +169,4 @@
     }
   }
 }
+

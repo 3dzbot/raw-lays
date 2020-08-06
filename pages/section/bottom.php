@@ -12,7 +12,7 @@
             <p>Звонки по России бесплатно, ежедневно с 9:00 до 21:00 (МСК)</p>
         </div>
         <div class="footer-right">
-            <a href="<?= $site_url ?>contacts" class="footer-link">ОБРАТНАЯ СВЯЗЬ</a>
+            <a href="https://laysfootball.ru/feedback/" class="footer-link">ОБРАТНАЯ СВЯЗЬ</a>
             <a href="<?= $site_url ?>assets/doc/pravila.docx" class="footer-link" download>ПРАВИЛА АКЦИИ</a>
             <a href="<?= $site_url ?>assets/doc/dogovor.docx" class="footer-link" download>ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</a>
         </div>

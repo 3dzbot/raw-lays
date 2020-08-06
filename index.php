@@ -31,6 +31,12 @@ if($request === '/404'){
 define('SITE_URL', $site_url);
 define('PAGE', basename($path, '.php'));
 
+// Ключ (Добавьте этот ключ в HTML-код сайта.)
+define('reCAPTCHA_sitekey','6LepTbsZAAAAAKwCBqc5Cek1dZLaTQo5iN1oAJD6'); // если неопределена, то запрашиваться не будет
+// Секретный ключ (Этот ключ нужен для связи между вашим сайтом и Google. Никому его не сообщайте)
+define('reCAPTCHA_secretkey','6LepTbsZAAAAAKq0mXxrW513Ya-oLNID2oiVoLYU'); // получить здесь https://www.google.com/recaptcha/admin
+
+
 require 'header.php';
 include $path;
 require 'footer.php';

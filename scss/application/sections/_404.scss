@@ -1,0 +1,22 @@
+#page-404 {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.container-404 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	h2 {
+		font-size: 36px;
+		color: #ffef00;
+		text-align: center;
+	}
+}
+.page-404-link {
+	font-size: 80px;
+	color: #fff;
+	margin-bottom: 40px;
+}

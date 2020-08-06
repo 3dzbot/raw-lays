@@ -26,20 +26,20 @@ const enableSourceMaps = ['--sourcemaps', '-s', '--development', '-dev', '-d'].s
 
 const styles = () => {
     return src('scss/*.scss')
-        .pipe(bulkSass())
-        .pipe(sourcemaps.init())
-        .pipe(sass())
-        .pipe(autoprefixer())
-        .pipe(gulpResolveUrl())
-        .pipe(cssmin())
-        .pipe(dest('./css/'));
+     .pipe(bulkSass())
+     .pipe(sourcemaps.init())
+     .pipe(sass())
+     .pipe(autoprefixer())
+     .pipe(gulpResolveUrl())
+     .pipe(cssmin())
+     .pipe(dest('./css/'));
 };
 
 const jsCommon = () => {
     return src([
         'js/src/vendor/jquery.min.js',
         //'js/src/vendor/jquery.form.min.js',
-        //'js/src/vendor/jquery.maskedinput.min.js',
+        'js/src/vendor/jquery.maskedinput.min.js',
         'js/src/common/lib.js',
         'js/src/common/config.js',
         'js/src/common/common.js',
@@ -47,30 +47,32 @@ const jsCommon = () => {
         'js/src/pages/*.js'
 
     ], { sourcemaps: true })
-        .pipe(concat('bundle.js'))
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
-        .pipe(uglify())
-        .pipe(dest('js/min', { sourcemaps: enableSourceMaps }))
+     .pipe(concat('bundle.js'))
+     .pipe(babel({
+         presets: ['@babel/env']
+     }))
+     .pipe(uglify())
+     .pipe(dest('js/min', { sourcemaps: enableSourceMaps }))
 };
 
-const jsPages = () => {
-    return src('js/src/pages/*.js', { sourcemaps: enableSourceMaps })
-        .pipe(concat('bundle.js'))
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
-        .pipe(uglify())
-        .pipe(dest('js/min', { sourcemaps: enableSourceMaps }))
-};
+// const jsPages = () => {
+//     return src('js/src/pages/*.js', { sourcemaps: enableSourceMaps })
+//         .pipe(concat('bundle.js'))
+//         .pipe(babel({
+//             presets: ['@babel/env']
+//         }))
+//         .pipe(uglify())
+//         .pipe(dest('js/min', { sourcemaps: enableSourceMaps }))
+// };
 
-const buildTask = parallel(styles, jsCommon, jsPages);
+// const buildTask = parallel(styles, jsCommon, jsPages);
+const buildTask = parallel(styles, jsCommon);
 
 const watchTask = () => {
     watch('scss/**/*.scss', styles);
     watch('js/src/common/*.js', jsCommon);
-    watch('js/src/pages/*.js', jsPages);
+    watch('js/src/pages/*.js', jsCommon);
+    // watch('js/src/pages/*.js', jsPages);
 };
 
 const defaultTask = () => {
@@ -81,7 +83,7 @@ const defaultTask = () => {
 
 task(styles);
 task(jsCommon);
-task(jsPages);
+// task(jsPages);
 task('build', buildTask);
 task('watch', watchTask);
 task('default', defaultTask);
