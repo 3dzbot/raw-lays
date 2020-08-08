@@ -68,7 +68,7 @@
 					</script>
 				<?}?>
 <!--                 <button>Зарегистроваться</button>-->
-                <button class="registration-submit" onclick="if(verifyGrecaptcha==undefined){alert('Подтвердите, что Вы - не робот!');return false;}">Зарегистроваться</button>
+                <button class="registration-submit" onclick="if(verifyGrecaptcha==undefined){alert('Подтвердите, что Вы - не робот!');return false;}">Зарегестрироваться</button>
 
             </form>
         </div>

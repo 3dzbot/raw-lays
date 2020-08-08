@@ -40,10 +40,13 @@
         </div>
         <!-- /.main-column -->
         <div class="thanks-column thanks-right">
-            <h1 class="thanks-title">СПАСИБО, <br>
-				<span>ЧТО ОБРАТИЛСЯ К НАМ!</span></h1>
+            <h1 class="thanks-title">Поздравляем!</h1>
             <div class="thanks-content">
-                Ответ на твой запрос будет отправлен на указанный адрес электронной почты в течении трёх рабочих дней
+				<p class="thanks-content-title">Твой билет в LAY'S & PEPSI DRIVE PARK отправлен на указанный почтовый адрес.</p>
+				<p class="thanks-content-second">Смотрим Финал Лиги чемпионов 23 августа
+					вместе с LAY’S и Pepsi в Лужниках!</p>
+				<p>СК “Лужники”, Южное спортивное ядро,
+					парковка Р-18. </p>
             </div>
             <a href="#" class="thanks-btn main-square-registration">На главную</a>
         </div>

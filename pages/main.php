@@ -76,7 +76,7 @@
                             и LAY’S & PEPSI BOX!
                         </div>
                     </div>
-                    <a href="" class="elem-link">Подробнее</a>
+                    <a href="<?= $site_url ?>city" class="elem-link">Подробнее</a>
                 </div>
                 <div class="elem-column">
                     <div class="elem-wrapper">

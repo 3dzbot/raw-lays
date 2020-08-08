@@ -70,4 +70,20 @@ document.addEventListener('DOMContentLoaded', () => {
         $("#registration-phone").mask("+7 (999) 999-99-99");
         $("#registration-birthday").mask("99.99.9999");
     }
+
+    if(document.getElementById('city-page')) {
+        var mySwiper = new Swiper('#city-page .swiper-container', {
+            // Optional parameters
+            direction: 'vertical',
+            loop: true,
+            speed: 400,
+            spaceBetween: 10,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                // prevEl: '.swiper-button-prev',
+            },
+        })
+    }
 });

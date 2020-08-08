@@ -36,7 +36,7 @@
   }
 }
 .thanks-title {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   font-size: 81px;
   font-weight: bold;
   text-align: center;
@@ -45,8 +45,21 @@
   }
 }
 .thanks-content {
-  font-size: 38px;
   text-align: center;
+  font-size: 30px;
+  p {
+    margin: 0 auto 30px;
+    max-width: 640px;
+  }
+  .thanks-content-second {
+    max-width: 700px;
+  }
+  .thanks-content-title {
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 40px;
+    max-width: 100%;
+  }
 }
 .thanks-btn {
   background: #f2d833;
@@ -64,8 +77,11 @@
       font-size: calc(52px + (52 - 28) * (100vw - 1668px) / (1668 - 320));
     }
   }
-  .thanks-content {
+  .thanks-content-title {
     font-size: calc(38px + (38 - 18) * (100vw - 1668px) / (1668 - 320));
+  }
+  .thanks-content {
+    font-size: calc(28px + (28 - 14) * (100vw - 1668px) / (1668 - 320));
   }
 }
 @media (max-width: 1568px) {

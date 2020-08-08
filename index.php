@@ -7,7 +7,7 @@ $subdir = trim(substr($script_dir1, strlen($script_dir2)), "/\\");
 $request_scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
 
 $site_url = $request_scheme.'://'.$_SERVER['HTTP_HOST'].'/';
-
+//var_dump($subdir,2323);exit();
 if(!empty($subdir)){
 	$site_url .= $subdir.'/';
 	$request = substr($_SERVER['REQUEST_URI'], strlen('/'.$subdir));
@@ -18,24 +18,18 @@ if(!empty($subdir)){
 if($request === '/') $request = '/main';
 $path = 'pages/'.$request.'.php';
 //var_dump($request);
-
-
 if(!file_exists($path)){
     header('Location: '.$site_url.'404');
-    exit();
-}
+    exit();}
 if($request === '/404'){
     header($_SERVER["SERVER_PROTOCOL"]." 404 not found");
 }
-
 define('SITE_URL', $site_url);
 define('PAGE', basename($path, '.php'));
-
 // Ключ (Добавьте этот ключ в HTML-код сайта.)
 define('reCAPTCHA_sitekey','6LepTbsZAAAAAKwCBqc5Cek1dZLaTQo5iN1oAJD6'); // если неопределена, то запрашиваться не будет
 // Секретный ключ (Этот ключ нужен для связи между вашим сайтом и Google. Никому его не сообщайте)
 define('reCAPTCHA_secretkey','6LepTbsZAAAAAKq0mXxrW513Ya-oLNID2oiVoLYU'); // получить здесь https://www.google.com/recaptcha/admin
-
 
 require 'header.php';
 include $path;

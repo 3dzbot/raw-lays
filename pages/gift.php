@@ -30,7 +30,7 @@
                 <p class="scene-content-title">Набор болельщика это:</p>
                 <ul>
                     <li><img src="./images/icons/star-silver.png" alt="призы мероприятия"> Миска под чипсы для большой компании друзей</li>
-                    <li><img src="./images/icons/star-silver.png" alt="призы мероприятия 2"> Краска-грим для яркогоболения</li>
+                    <li><img src="./images/icons/star-silver.png" alt="призы мероприятия 2"> Краска-грим для яркого боления</li>
                     <li><img src="./images/icons/star-silver.png" alt="призы мероприятия 3"> Надувная рука для мощной поддержки</li>
                     <li><img src="./images/icons/star-silver.png" alt="призы мероприятия 4"> Дудка-рожок для громкого празднования</li>
                 </ul>
