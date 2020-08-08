@@ -100,13 +100,19 @@
 .registration-submit {
   margin-top: 20px;
 }
+.reg-birthday-wrap {
+  input {
+    width: 100%;
+  }
+}
 .form-reg-top-wrap,
 .form-reg-bot-wrap {
   display: flex;
   justify-content: space-between;
   width: 100%;
   input,
-  .select-city-wrap {
+  .select-city-wrap,
+  .reg-birthday-wrap {
     flex-basis: 45%;
   }
 }
@@ -159,6 +165,40 @@
     flex-direction: column;
     input, select {
       flex-basis: 100%;
+    }
+    .reg-birthday-wrap {
+      position: relative;
+      margin-bottom: 16px;
+      &:after {
+        content: "▼";
+        position: absolute;
+        color: #000;
+        background: transparent;
+        right: 32px;
+        top: 22px;
+        z-index: 2;
+      }
+    }
+    #reg-birthday {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      //&::-webkit-datetime-edit-fields-wrapper { background: #fce53b; }
+      //&::-webkit-datetime-edit-text { color: #000; }
+      //&::-webkit-datetime-edit-month-field { color: #000; }
+      //&::-webkit-datetime-edit-day-field { color: #000; }
+      //&::-webkit-datetime-edit-year-field { color: #000; }
+      //&::-webkit-inner-spin-button { display: none; }
+
+      &::placeholder,
+      &:-moz-placeholder,
+      &::-webkit-input-placeholder {
+        color: #000!important;
+      }
+
+      margin-bottom: 0;
+      width: 100%;
+
     }
   }
   .form-reg-wrap {

@@ -27,33 +27,37 @@
             LAY’S<span>&</span>PEPSI DRIVE PARK
         </h1>
         <div class="form-reg-wrap">
-            <form action="./api/register.php" method="post">
+        <!-- action="./api/register.php" -->
+            <form id="register_form"  method="post">
                 <div class="form-reg-top-wrap">
-                    <input type="text" name="name" placeholder="ФИО *" required>
-                    <input type="tel" id="registration-phone" name="phone" placeholder="+7 (000) 000 - 00 - 00" required>
+                    <input id="registration-name" type="text" name="name" placeholder="ФИО *" required>
+                    <input id="registration-phone" type="tel" name="phone" placeholder="+7 (000) 000 - 00 - 00" required>
                 </div>
                 <input type="text" name="email" placeholder="Ваш @mail *" required>
+
                 <div class="form-reg-bot-wrap">
-                    <input type="text" name="birthday" id="registration-birthday" placeholder="Дата рождения *" required>
+					<input type="text" id="registration-birthday" name="birthday" placeholder="Дата рождеия *" required>
+<!--					<div class="reg-birthday-wrap">-->
+<!--                    <input id="reg-birthday" type="date" min="1920-01-01" max="2020-08-01" name="birthday"  required></div>-->
 					<div class="select-city-wrap">
-                    <select name="city" required class="select-city">
+                    <select id="registration-city" name="city" required class="select-city">
                         <option value="" hidden>Город участия </option>
-                        <option value="moscow">Москва</option>
+                        <option value="Москва">Москва</option>
                     </select>
 					</div>
                 </div>
 				<div class="select-wrap"></div>
 				<div class="way_of_visiting-wrap">
-                <select name="way_of_visiting" required class="select-way">
+                <select id="registration-way_of_visiting" name="way_of_visiting" required class="select-way">
                     <option value="" hidden>Способ посещения мероприятия</option>
-                    <option value="legs">Пешком</option>
-                    <option value="car">На автомобиле</option>
+                    <option value="Пешком">Пешком</option>
+                    <option value="На автомобиле">На автомобиле</option>
                 </select>
 				</div>
                 <label class="reg-checked">
-                    <input type="checkbox" value="terms" checked required> <span>Согласен с правилами проведения и обработкой персональных данных</span>
+                    <input id="terms" type="checkbox" value="terms" checked required> <span>Согласен с правилами проведения и обработкой персональных данных</span>
                 </label>
-				<?if(defined('reCAPTCHA_sitekey')){?>
+				<?php if(defined('reCAPTCHA_sitekey')){?>
 					<script>
 						var verifyGrecaptcha = undefined;
 						var verifyCallback = function(response) {
@@ -62,13 +66,16 @@
 					</script>
 					<div style="width: 50%; margin: 0 auto; text-align: center;" class="g-recaptcha" data-sitekey="<?= reCAPTCHA_sitekey ?>" data-callback="verifyCallback" data-expired-callback="verifyCallback"></div>
 					<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-				<?}else{?>
+				<?php }else{?>
 					<script>
 						var verifyGrecaptcha = 1;
 					</script>
-				<?}?>
+				<?php }?>
 <!--                 <button>Зарегистроваться</button>-->
-                <button class="registration-submit" onclick="if(verifyGrecaptcha==undefined){alert('Подтвердите, что Вы - не робот!');return false;}">Зарегестрироваться</button>
+                <button id="btn_send_register" class="registration-submit" onclick="
+                 sendAjaxForm('./api/register.php'); return false; 
+                
+                ">Зарегистрироваться</button>
 
             </form>
         </div>
