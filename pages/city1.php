@@ -21,43 +21,49 @@
 
 <main id="city-page">
 	<div class="city-swiper-overflow">
-		<div class="city-wrapper-first">
-			<div class="city-left">
-				<div class="city-number"><span>01</span><span>02</span></div>
-				<div class="city-img"><img src="./images/city/item.png" alt=""></div>
-			</div>
-			<div class="city-right">
-				<div class="swiper-container">
-					<!-- Additional required wrapper -->
-					<div class="swiper-wrapper">
-						<!-- Slides -->
-						<div class="swiper-slide swiper-slide-one" data-number="01">
-							<div class="city-title">
-								<img src="./images/city/title.png" alt="">
-							</div>
-							<div class="city-subtitle"> Выиграй бесплатную поездку на такси и Lay’s & Pepsi Box!</div>
-							<p class="city-list"><span>01</span><span>Покажи свою готовность к матчам ЛЧ! Выложи фото на открытую страницу VK с геотегом и хэштегами  #футболСдоставкой #футболВКУСНЕЕсLaysPepsi </span></p>
-							<p class="city-list"><span>02</span><span>Выиграй промокод Ситимобил в чат-боте Lay’s VK, чтобы успеть на игру и насладиться ею в кругу своих друзей или таких же фанатов, как и ты. </span></p>
-							<p class="city-list"><span>03</span><span>Получи футбольное комбо — за самые яркие и креативные фото! Промокод Ситимобил и Lay’s & Pepsi Box. </span></p>
+	<div class="swiper-container">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+			<!-- Slides -->
+			<div class="swiper-slide">
+				<div class="city-wrapper-first">
+					<div class="city-left">
+						<div class="city-number"><span>01</span><span>02</span></div>
+						<div class="city-img"><img src="./images/city/item.png" alt=""></div>
+					</div>
+					<div class="city-right">
+						<div class="city-title">
+							<img src="./images/city/title.png" alt="">
 						</div>
-						<div class="swiper-slide swiper-slide-two" data-number="02">
-							<div class="city-subtitle city-subtitle-right">
-								Но на этом игра не заканчивается. Тебя ждет второй тайм призов!</div>
-							<p class="city-list"><span>01</span><span>Поймай в своем городе Lay’s&Pepsi-мобиль и сфотографируйся на фоне его яркого стикера “Футбол вкуснее с Lay’s и Pepsi”</span></p>
-							<p class="city-list"><span>02</span><span>Получи Lay’s & Pepsi Box за самые яркие и креативные кадры!</span></p>
-							<p class="city-list-bottom"><span>Количество подарочных боксов ограничено.
+						<div class="city-subtitle"> Выиграй бесплатную поездку на такси и Lay’s & Pepsi Box!</div>
+						<p class="city-list"><span>01</span><span>Покажи свою готовность к матчам ЛЧ! Выложи фото на открытую страницу VK с геотегом и хэштегами  #футболСдоставкой #футболВКУСНЕЕсLaysPepsi </span></p>
+						<p class="city-list"><span>02</span><span>Выиграй промокод Ситимобил в чат-боте Lay’s VK, чтобы успеть на игру и насладиться ею в кругу своих друзей или таких же фанатов, как и ты. </span></p>
+						<p class="city-list"><span>03</span><span>Получи футбольное комбо — за самые яркие и креативные фото! Промокод Ситимобил и Lay’s & Pepsi Box. </span></p>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="city-wrapper-second">
+					<div class="city-left">
+						<div class="city-number"><span>02</span><span>02</span></div>
+						<div class="city-img"><img src="./images/city/item.png" alt=""></div>
+					</div>
+					<div class="city-right">
+						<div class="city-subtitle city-subtitle-right">
+							Но на этом игра не заканчивается. Тебя ждет второй тайм призов!</div>
+						<p class="city-list"><span>01</span><span>Поймай в своем городе Lay’s&Pepsi-мобиль и сфотографируйся на фоне его яркого стикера “Футбол вкуснее с Lay’s и Pepsi”</span></p>
+						<p class="city-list"><span>02</span><span>Получи Lay’s & Pepsi Box за самые яркие и креативные кадры!</span></p>
+						<p class="city-list-bottom"><span>Количество подарочных боксов ограничено.
 Розыгрыш призов проводится с 7 по 23 августа в городах: Москва, Санкт-Петербург, Екатеринбург, Нижний Новгород, Краснодар, Новосибирск, Самара
 </span></p>
-							<p class="city-list-bottom city-list-bottom-last">
-								*призы могут отличаться по внешнему виду от изображенных на рекламных материалах
-							</p>
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="swiper-button-next"></div>
+
+	</div>
+	<div class="swiper-button-next"></div>
 	</div>
 	<div class="city-mobile">
 		<div class="city-title">

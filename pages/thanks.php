@@ -31,15 +31,22 @@
                 <img src="./images/main/bg-bottom.png" alt="мероприятие в честь финала лиги чемпионов 3">
             </div>
             <div class="thanks-container">
-				​<picture>
-					<source srcset="./images/thanks/sub-title-m.png" media="(max-width: 768px)">
-					<img src="./images/thanks/sub-title.png" alt="Спасибо за регистрацию">
-				</picture>
-                <a href="<?= $site_url ?>registration" class="main-square-registration">Регистрация</a>
+				<div class="container">
+					<div class="main-square-title">23 августа!</div>
+					<div class="main-square-subtitle">Смотрим Финал Лиги чемпионов <br>
+						вместе с LAY`S и Pepsi в Лужниках!</div>
+					<div class="main-square-text">Специальные гости: Егор&nbsp;Крид и Клава&nbsp;Кока</div>
+					<a href="<?= $site_url ?>registration" class="main-square-registration">Регистрация</a>
+				</div>
+<!--				​<picture>-->
+<!--					<source srcset="./images/thanks/sub-title-m.png" media="(max-width: 768px)">-->
+<!--					<img src="./images/thanks/sub-title.png" alt="Спасибо за регистрацию">-->
+<!--				</picture>-->
+
             </div>
         </div>
         <!-- /.main-column -->
-        <div class="thanks-column thanks-right">
+        <div class="thanks-column thanks-right" id="thankyou">
             <h1 class="thanks-title">Поздравляем!</h1>
             <div class="thanks-content">
 				<p class="thanks-content-title">Твой билет в LAY'S & PEPSI DRIVE PARK отправлен на указанный почтовый адрес.</p>
@@ -70,8 +77,8 @@
 		</div>
 		<div class="footer-right">
 			<a href="<?= $site_url ?>contacts" class="footer-link">ОБРАТНАЯ СВЯЗЬ</a>
-			<a href="<?= $site_url ?>assets/doc/pravila.docx" class="footer-link" download>ПРАВИЛА АКЦИИ</a>
-			<a href="<?= $site_url ?>assets/doc/dogovor.docx" class="footer-link" download>ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</a>
+			<a href="<?= $site_url ?>assets/doc/pravila_konkyrca.pdf" class="footer-link" download>ПРАВИЛА АКЦИИ</a>
+			<a href="<?= $site_url ?>assets/doc/dogovor.pdf" class="footer-link" download>ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</a>
 		</div>
 	</div>
 	<!-- /.container -->

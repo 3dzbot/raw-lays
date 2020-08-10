@@ -1,8 +1,6 @@
-header {
-  //height: 100px;
+.header {
   display: flex;
   align-items: center;
-  background: #fcd901;
   z-index: 10;
   .container {
     display: flex;
@@ -67,11 +65,13 @@ header {
     transform: rotate(360deg);
   }
 }
-@media (max-width: 1368px) {
+@media (max-width: 1468px) {
   .logo,
   .register-wrapper {
     padding: 16px 0;
   }
+}
+@media (max-width: 1368px) {
   .logo {
     max-width: 280px;
   }

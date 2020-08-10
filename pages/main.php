@@ -21,20 +21,20 @@
 <main id="main-page">
     <section class="main-row">
         <div class="main-column main-square">
-            <div class="bg-main-top">
-                <img src="./images/main/bg-top.jpg" alt="мероприятие в честь финала лиги чемпионов">
-            </div>
-            <div class="bg-prise">
-                <img src="./images/main/prise.png" alt="мероприятие в честь финала лиги чемпионов 2">
-            </div>
-            <div class="bg-main-bottom">
-                <img src="./images/main/bg-bottom.png" alt="мероприятие в честь финала лиги чемпионов 3">
-            </div>
+<!--            <div class="bg-main-top">-->
+<!--                <img src="./images/main/bg-top.jpg" alt="мероприятие в честь финала лиги чемпионов">-->
+<!--            </div>-->
+<!--            <div class="bg-prise">-->
+<!--                <img src="./images/main/prise.png" alt="мероприятие в честь финала лиги чемпионов 2">-->
+<!--            </div>-->
+<!--            <div class="bg-main-bottom">-->
+<!--                <img src="./images/main/bg-bottom.png" alt="мероприятие в честь финала лиги чемпионов 3">-->
+<!--            </div>-->
             <div class="container">
                 <div class="main-square-title">23 августа!</div>
                 <div class="main-square-subtitle">Смотрим Финал Лиги чемпионов <br>
                     вместе с LAY`S и Pepsi в Лужниках!</div>
-                <div class="main-square-text">Специальные гости: Егор Крид и Клава Кока</div>
+                <div class="main-square-text">Специальные гости: Егор&nbsp;Крид и Клава&nbsp;Кока</div>
                 <a href="<?= $site_url ?>registration" class="main-square-registration">Регистрация</a>
             </div>
         </div>
@@ -56,12 +56,12 @@
                 </div>
                 <div class="elem-column elem-column-guest">
                     <div class="elem-img">
-                        <img src="./images/main/item2.png" alt="специальные гости">
+                        <img src="./images/main/item21.png" alt="специальные гости">
                     </div>
                     <div class="elem-wrapper">
-                        <div class="elem-title">Специальные <br><span>гости мероприятия</span></div>
+                        <div class="elem-title">Специальные <br><span class="elem-title-span">гости мероприятия</span></div>
                         <div class="elem-subtitle">
-                            ЕГОР КрИД и КЛАВА КОКА
+                            ЕГОР&nbsp;КрИД и КЛАВА&nbsp;КОКА
                         </div>
                     </div>
                     <a href="<?= $site_url ?>scene" class="elem-link">Подробнее</a>

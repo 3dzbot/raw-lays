@@ -1,4 +1,5 @@
 .thanks {
+  display: flex;
   flex-grow: 1;
   .bg-main-bottom {
     top: 34%;
@@ -6,7 +7,6 @@
 }
 .thanks-row {
   display: flex;
-  height: 100%;
 }
 .thanks-column {
   display: flex;
@@ -72,21 +72,17 @@
 }
 @media (max-width: 1668px) {
   .thanks-title {
-    font-size: calc(72px + (72 - 54) * (100vw - 1668px) / (1668 - 320));
-    span {
-      font-size: calc(52px + (52 - 28) * (100vw - 1668px) / (1668 - 320));
-    }
-  }
-  .thanks-content-title {
-    font-size: calc(38px + (38 - 18) * (100vw - 1668px) / (1668 - 320));
+    font-size: calc(72px + (72 - 36) * (100vw - 1668px) / (1668 - 320));
   }
   .thanks-content {
     font-size: calc(28px + (28 - 14) * (100vw - 1668px) / (1668 - 320));
+    .thanks-content-title {
+      font-size: calc(38px + (38 - 18) * (100vw - 1668px) / (1668 - 320));
+    }
   }
 }
 @media (max-width: 1568px) {
   .thanks {
-    flex-grow: 1;
     .bg-main-bottom {
       top: 40%;
     }
@@ -112,6 +108,16 @@
     padding-bottom: 30px;
   }
 }
+@media (max-width: 1268px) {
+  .thanks-content {
+    p {
+      margin-bottom: 10px;
+    }
+    .thanks-content-title {
+      margin-bottom: 30px;
+    }
+  }
+}
 @media (max-width: 1000px) {
   .thanks-column .bg-prise {
     top: 25%;
@@ -121,13 +127,20 @@
       max-width: 80%;
     }
   }
+  .thanks-content {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .thanks-right {
+    padding: 0 0 30px;
+  }
+  .thanks-title {
+    font-size: calc(42px + (42 - 32) * (100vw - 768px) / (768 - 320));
+  }
 }
 @media (max-width: 768px) {
   .thanks-title {
-    font-size: calc(52px + (52 - 46) * (100vw - 768px) / (768 - 320));
-    span {
-      font-size: calc(36px + (36 - 26) * (100vw - 768px) / (768 - 320));
-    }
+    font-size: calc(42px + (42 - 32) * (100vw - 768px) / (768 - 320));
   }
   .thanks-content {
     font-size: calc(24px + (24 - 18) * (100vw - 768px) / (768 - 320));
@@ -138,8 +151,8 @@
     .main-square {
       background: url('../images/thanks/bg-top-m.png') center top / cover no-repeat;;
     }
-    .thanks-right {
-      //background: #000;
+    .main-square-title {
+      margin-top: 150px;
     }
   }
   .thanks-row {

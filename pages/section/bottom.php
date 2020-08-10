@@ -13,8 +13,8 @@
         </div>
         <div class="footer-right">
             <a href="https://laysfootball.ru/feedback/" class="footer-link">ОБРАТНАЯ СВЯЗЬ</a>
-            <a href="<?= $site_url ?>assets/doc/pravila.docx" class="footer-link" download>ПРАВИЛА АКЦИИ</a>
-            <a href="<?= $site_url ?>assets/doc/dogovor.docx" class="footer-link" download>ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</a>
+            <a href="<?= $site_url ?>assets/doc/pravila_konkyrca.pdf" class="footer-link" download>ПРАВИЛА АКЦИИ</a>
+            <a href="<?= $site_url ?>assets/doc/dogovor.pdf" class="footer-link" download>ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</a>
         </div>
     </div>
     <!-- /.container -->

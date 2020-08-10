@@ -72,12 +72,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if(document.getElementById('city-page')) {
+        let cityNumber = document.querySelector('.city-left .city-number span');
+        let firstSlide = document.querySelector('.swiper-slide-one');
+        let secondSlide = document.querySelector('.swiper-slide-two');
         var mySwiper = new Swiper('#city-page .swiper-container', {
             // Optional parameters
             direction: 'vertical',
             loop: true,
             speed: 400,
             spaceBetween: 10,
+            mousewheel: true,
 
             // Navigation arrows
             navigation: {
@@ -85,5 +89,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 // prevEl: '.swiper-button-prev',
             },
         })
+        mySwiper.on('slideChange', function () {
+            let swiperActiveNumber = document.querySelector('.swiper-slide-active').dataset.number;
+            firstSlide = document.querySelector('.swiper-slide-one');
+            secondSlide = document.querySelector('.swiper-slide-two');
+            if(swiperActiveNumber === '01') {
+                cityNumber.textContent = '02';
+            } else {
+                cityNumber.textContent = '01';
+            }
+        });
     }
 });

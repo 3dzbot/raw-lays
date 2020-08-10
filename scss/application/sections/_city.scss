@@ -85,11 +85,12 @@
 .city-subtitle,
 .city-list-bottom {
 	margin-left: 45px;
+	margin-right: 45px;
 }
 .city-list-bottom {
-	font-size: 24px;
-	margin-top: 30px;
-	margin-bottom: 30px;
+	font-size: 18px;
+	padding: 10px 0;
+	max-width: 70%;
 }
 .city-list {
 	display: flex;
@@ -134,11 +135,16 @@
 	display: none;
 	background: url('../images/city/bg-m.jpg') top / cover;
 }
+.swiper-wrapper {
+	.city-list-bottom {
+		margin-right: 45px;
+	}
+}
 .swiper-button-next {
 	transform: rotate(90deg);
 	color: #fff;
 	top: calc(100vh - 130px);
-	right: 50px;
+	right: 80px;
 	animation: anim 1.5s linear infinite;
 }
 @keyframes anim {
@@ -166,7 +172,7 @@
 		margin-bottom: 30px;
 	}
 	.city-list-bottom {
-		font-size: calc(24px + (24 - 18) * (100vw - 1568px) / (1568 - 768));
+		font-size: calc(18px + (18 - 14) * (100vw - 1568px) / (1568 - 768));
 	}
 	.city-list {
 		font-size: calc(24px + (24 - 18) * (100vw - 1568px) / (1568 - 1000));
@@ -193,6 +199,15 @@
 		}
 	}
 }
+@media (max-width: 1268px) {
+	.swiper-slide .city-subtitle-right {
+		margin-top: 85px;
+	}
+	.swiper-wrapper .city-list-bottom {
+		margin-right: 25px;
+		max-width: 100%;
+	}
+}
 @media (max-width: 868px) {
 	.city-title,
 	.city-list,
@@ -201,8 +216,7 @@
 		margin-left: 25px;
 	}
 	.city-list-bottom {
-		margin-top: 20px;
-		margin-bottom: 20px;
+		//padding: 20px 0;
 	}
 	.city-title {
 		margin-top: 100px;
@@ -221,6 +235,7 @@
 	}
 	.city-mobile {
 		display: block;
+		height: 100%;
 	}
 	.city-mobile-img {
 		width: 100%;
@@ -236,6 +251,13 @@
 		margin-left: 25px;
 		margin-right: 25px;
 	}
+	.city-list-bottom {
+		max-width: 100%;
+		padding: 10px 0;
+	}
+	.city-list-bottom-last {
+		padding-bottom: 40px;
+	}
 	.city-title {
 		margin-top: 0;
 		padding-top: 170px;
@@ -246,21 +268,20 @@
 	}
 	.city-list span:first-child {
 		font-size: calc(52px + (52 - 28) * (100vw - 1568px)/ (1568 - 768));
+		margin-top: 0;
 	}
 	.city-list span:last-child {
 		max-width: 90%;
 		font-size: calc(24px + (24 - 18) * (100vw - 1568px)/ (1568 - 320));
+		margin-top: 0;
 	}
 	.city-list-bottom {
-		font-size: calc(24px + (24 - 18) * (100vw - 1568px)/ (1568 - 320));
+		//font-size: calc(18px + (18 - 18) * (100vw - 1568px)/ (1568 - 320));
 	}
 }
 @media (max-width: 450px) {
 	.city-mobile-img {
 		display: block;
-	}
-	.city-list-bottom {
-		padding-bottom: 20px;
 	}
 	.city-subtitle-right {
 		margin-top: 50px;
@@ -280,7 +301,7 @@
 	}
 	.city-list span:last-child,
 	.city-list-bottom {
-		font-size: 18px;
+		font-size: 14px;
 	}
 }
 @media (max-height: 800px) and (min-width: 768px) {

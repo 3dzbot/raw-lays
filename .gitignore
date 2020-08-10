@@ -4,3 +4,6 @@ node_modules
 compiled
 files/
 package-lock.json
+api
+images
+lays-damp.7z

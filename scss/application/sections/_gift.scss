@@ -58,7 +58,7 @@
   }
 }
 .scene-title {
-  margin-top: 200px;
+  padding-top: 200px;
   margin-bottom: 55px;
   font-size: 72px;
   text-transform: uppercase;
@@ -96,7 +96,7 @@
   .scene-title {
 
     //margin-top: 240px;
-    margin-top: calc(200px + (200 - 155) * (100vw - 1668px) / (1668 - 320));
+    padding-top: calc(200px + (200 - 155) * (100vw - 1668px) / (1668 - 320));
     //margin-bottom: 55px;
     //margin-bottom: calc(24px + (24 - 16) * (100vw - 1668px) / (1668 - 320));
     //font-size: 72px;

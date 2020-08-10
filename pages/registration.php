@@ -1,7 +1,7 @@
 <header class="header header-registration">
     <div class="container">
         <a class="logo" href="#">
-            <img src="./images/header/logo.png" alt="смотрим финал лиги чемпионов вместе с лейс и пепси">
+            <img src="./images/header/logo.png" alt="логотип">
         </a>
         <div class="register-wrapper">
             <a href="#" class="header-home-link">
@@ -19,68 +19,70 @@
     </div>
 </header>
 <main id="registration-page">
-    <div class="container">
-        <div class="subtitle-reg">
-            регистрация
-        </div>
-        <h1 class="title-reg">
-            LAY’S<span>&</span>PEPSI DRIVE PARK
-        </h1>
-        <div class="form-reg-wrap">
-        <!-- action="./api/register.php" -->
-            <form id="register_form"  method="post">
-                <div class="form-reg-top-wrap">
-                    <input id="registration-name" type="text" name="name" placeholder="ФИО *" required>
-                    <input id="registration-phone" type="tel" name="phone" placeholder="+7 (000) 000 - 00 - 00" required>
-                </div>
-                <input type="text" name="email" placeholder="Ваш @mail *" required>
-
-                <div class="form-reg-bot-wrap">
-					<input type="text" id="registration-birthday" name="birthday" placeholder="Дата рождеия *" required>
-<!--					<div class="reg-birthday-wrap">-->
-<!--                    <input id="reg-birthday" type="date" min="1920-01-01" max="2020-08-01" name="birthday"  required></div>-->
-					<div class="select-city-wrap">
-                    <select id="registration-city" name="city" required class="select-city">
-                        <option value="" hidden>Город участия </option>
-                        <option value="Москва">Москва</option>
-                    </select>
+	<section class="registration-section">
+		<div class="container">
+			<div class="subtitle-reg">
+				регистрация
+			</div>
+			<h1 class="title-reg">
+				LAY’S<span>&</span>PEPSI DRIVE PARK
+			</h1>
+			<div class="form-reg-wrap">
+				<!-- action="./api/register.php" -->
+				<form id="register_form"  method="post">
+					<div class="form-reg-top-wrap">
+						<input id="registration-name" type="text" name="name" placeholder="ФИО *" required>
+						<input id="registration-phone" type="tel" name="phone" placeholder="+7 (000) 000 - 00 - 00" required>
 					</div>
-                </div>
-				<div class="select-wrap"></div>
-				<div class="way_of_visiting-wrap">
-                <select id="registration-way_of_visiting" name="way_of_visiting" required class="select-way">
-                    <option value="" hidden>Способ посещения мероприятия</option>
-                    <option value="Пешком">Пешком</option>
-                    <option value="На автомобиле">На автомобиле</option>
-                </select>
-				</div>
-                <label class="reg-checked">
-                    <input id="terms" type="checkbox" value="terms" checked required> <span>Согласен с правилами проведения и обработкой персональных данных</span>
-                </label>
-				<?php if(defined('reCAPTCHA_sitekey')){?>
-					<script>
-						var verifyGrecaptcha = undefined;
-						var verifyCallback = function(response) {
-							verifyGrecaptcha = response;
-						};
-					</script>
-					<div style="width: 50%; margin: 0 auto; text-align: center;" class="g-recaptcha" data-sitekey="<?= reCAPTCHA_sitekey ?>" data-callback="verifyCallback" data-expired-callback="verifyCallback"></div>
-					<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-				<?php }else{?>
-					<script>
-						var verifyGrecaptcha = 1;
-					</script>
-				<?php }?>
-<!--                 <button>Зарегистроваться</button>-->
-                <button id="btn_send_register" class="registration-submit" onclick="
-                 sendAjaxForm('./api/register.php'); return false; 
-                
+					<input type="text" name="email" placeholder="Ваш @mail *" required>
+
+					<div class="form-reg-bot-wrap">
+						<input type="text" id="registration-birthday" name="birthday" placeholder="Дата рождения *" required>
+						<!--					<div class="reg-birthday-wrap">-->
+						<!--                    <input id="reg-birthday" type="date" min="1920-01-01" max="2020-08-01" name="birthday"  required></div>-->
+						<div class="select-city-wrap">
+							<select id="registration-city" name="city" required class="select-city">
+								<option value="" hidden>Город участия </option>
+								<option value="Москва">Москва</option>
+							</select>
+						</div>
+					</div>
+					<div class="select-wrap"></div>
+					<div class="way_of_visiting-wrap">
+						<select id="registration-way_of_visiting" name="way_of_visiting" required class="select-way">
+							<option value="" hidden>Способ посещения мероприятия</option>
+							<option value="Пешком">Пешком</option>
+							<option value="На автомобиле">На автомобиле</option>
+						</select>
+					</div>
+					<label class="reg-checked">
+						<input id="terms" type="checkbox" value="terms" checked required> <span>Согласен с правилами проведения и обработкой персональных данных</span>
+					</label>
+					<?php if(defined('reCAPTCHA_sitekey')){?>
+						<script>
+							var verifyGrecaptcha = undefined;
+							var verifyCallback = function(response) {
+								verifyGrecaptcha = response;
+							};
+						</script>
+						<div style="width: 50%; margin: 0 auto; text-align: center;" class="g-recaptcha" data-sitekey="<?= reCAPTCHA_sitekey ?>" data-callback="verifyCallback" data-expired-callback="verifyCallback"></div>
+						<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+					<?php }else{?>
+						<script>
+							var verifyGrecaptcha = 1;
+						</script>
+					<?php }?>
+					<!--                 <button>Зарегистроваться</button>-->
+					<button id="btn_send_register" class="registration-submit" onclick="
+                 sendAjaxForm('./api/register.php'); return false;
+
                 ">Зарегистрироваться</button>
 
-            </form>
-        </div>
-    </div>
-    <!-- /.container -->
+				</form>
+			</div>
+		</div>
+		<!-- /.container -->
+	</section>
 </main>
 <!-- /#registration-page -->
 <?php require 'pages/section/bottom.php'; ?>

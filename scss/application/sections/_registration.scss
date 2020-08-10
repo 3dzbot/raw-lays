@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .header-registration {
   position: absolute;
   left: 0;
@@ -5,25 +12,47 @@
   right: 0;
   background: transparent;
 }
+.registration-section {
+  text-align: center;
+  width: 100%;
+}
 #registration-page {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   background: url("./images/registration/bg.jpg") center / cover no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  //min-height: 100%;
+  padding: 5px 0;
   .container {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    padding: 110px 0 8px;
   }
 }
 .subtitle-reg {
+  padding: 1px 0;
   font-size: 48px;
   text-transform: uppercase;
   color: #000;
   font-weight: bold;
   margin-bottom: 10px;
-  margin-top: 128px;
 }
 .title-reg {
   font-size: 77px;
@@ -41,7 +70,12 @@
   max-width: 750px;
   form {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -68,6 +102,9 @@
     background: #fce53b;
     padding: 14px 30px;
     border-radius: 26px;
+  }
+  input::-webkit-input-placeholder {
+    color: #252525;
   }
   input::placeholder,
   input::-webkit-input-placeholder,
@@ -107,31 +144,44 @@
 }
 .form-reg-top-wrap,
 .form-reg-bot-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
+  input, select {
+    //display: block;
+  }
   input,
   .select-city-wrap,
   .reg-birthday-wrap {
+    -ms-flex-preferred-size: 45%;
     flex-basis: 45%;
   }
 }
 .reg-checked {
-  margin-bottom: 33px;
+  padding-bottom: 33px;
   input {
     margin-bottom: 0;
   }
   line-height: 1;
 }
 @media (max-width: 1368px) {
+  #registration-page .container {
+    padding-top: 168px;
+  }
   .subtitle-reg {
-    margin-top: calc(198px + (198 - 178) * (100vw - 1368px) / (1368 - 320));
+
+    //padding-top: calc(198px + (198 - 178) * (100vw - 1368px) / (1368 - 320));
     font-size: calc(48px + (48 - 38) * (100vw - 1368px) / (1368 - 320));
   }
   .title-reg {
     font-size: calc(77px + (77 - 27) * (100vw - 1368px) / (1368 - 320));
   }
   .form-reg-wrap {
+    //height: max-content;
     .select-city-wrap,
     .way_of_visiting-wrap {
       &:after {
@@ -148,7 +198,19 @@
     }
   }
 }
+@media (max-width: 1368px) {
+  #registration-page .container {
+    padding-top: 178px;
+  }
+  .subtitle-reg {
+  }
+}
 @media (max-width: 768px) {
+  #registration-page {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
   .reg-checked {
     display: block;
   }
@@ -161,9 +223,15 @@
 @media (max-width: 550px) {
   .form-reg-top-wrap,
   .form-reg-bot-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     input, select {
+      -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
     }
     .reg-birthday-wrap {
@@ -183,22 +251,18 @@
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      //&::-webkit-datetime-edit-fields-wrapper { background: #fce53b; }
-      //&::-webkit-datetime-edit-text { color: #000; }
-      //&::-webkit-datetime-edit-month-field { color: #000; }
-      //&::-webkit-datetime-edit-day-field { color: #000; }
-      //&::-webkit-datetime-edit-year-field { color: #000; }
-      //&::-webkit-inner-spin-button { display: none; }
+
+      &::-moz-placeholder {
+        color: #000!important;
+      }
 
       &::placeholder,
       &:-moz-placeholder,
       &::-webkit-input-placeholder {
         color: #000!important;
       }
-
       margin-bottom: 0;
       width: 100%;
-
     }
   }
   .form-reg-wrap {
@@ -209,3 +273,236 @@
   }
 }
 
+
+
+
+//.header-registration {
+//  position: absolute;
+//  left: 0;
+//  top: 0;
+//  right: 0;
+//  background: transparent;
+//}
+//.registration-section {
+//  text-align: center;
+//  width: 100%;
+//}
+//#registration-page {
+//  flex-grow: 1;
+//  background: url("./images/registration/bg.jpg") center / cover no-repeat;
+//  display: flex;
+//  //min-height: 100%;
+//  padding: 5px 0;
+//  .container {
+//    flex-grow: 1;
+//    display: flex;
+//    align-items: center;
+//    justify-content: center;
+//    flex-direction: column;
+//    padding: 110px 0 8px;
+//  }
+//}
+//.subtitle-reg {
+//  padding: 1px 0;
+//  font-size: 48px;
+//  text-transform: uppercase;
+//  color: #000;
+//  font-weight: bold;
+//  margin-bottom: 10px;
+//}
+//.title-reg {
+//  font-size: 77px;
+//  text-transform: uppercase;
+//  font-weight: bold;
+//  color: #000;
+//  margin-bottom: 46px;
+//  text-align: center;
+//  span {
+//    color: #ea0a2a;
+//  }
+//}
+//.form-reg-wrap {
+//  width: 100%;
+//  max-width: 750px;
+//  form {
+//    width: 100%;
+//    display: flex;
+//    flex-direction: column;
+//  }
+//
+//  select {
+//    -webkit-appearance: none;
+//    -moz-appearance: none;
+//    appearance: none;
+//  }
+//  input, select {
+//    font-size: 24px;
+//    color: #252525;
+//    display: inline-block;
+//  }
+//  input,
+//  .way_of_visiting-wrap,
+//  .select-city-wrap,
+//  button {
+//    margin-bottom: 16px;
+//  }
+//  input,
+//  select,
+//  button {
+//    color: #000;
+//    background: #fce53b;
+//    padding: 14px 30px;
+//    border-radius: 26px;
+//  }
+//  input::placeholder,
+//  input::-webkit-input-placeholder,
+//  select {
+//    color: #252525;
+//  }
+//  .select-city-wrap,
+//  .way_of_visiting-wrap {
+//    position: relative;
+//    &:after {
+//      content: "▼";
+//      //font-size: 12px;
+//      position: absolute;
+//      color: #000;
+//      right: 32px;
+//      top: 22px;
+//      z-index: 2;
+//    }
+//    select {
+//      width: 100%;
+//    }
+//  }
+//  button {
+//    font-size: 24px;
+//    text-transform: uppercase;
+//    background: #ea0a2a;
+//    color: #fff;
+//  }
+//}
+//.registration-submit {
+//  margin-top: 20px;
+//}
+//.reg-birthday-wrap {
+//  input {
+//    width: 100%;
+//  }
+//}
+//.form-reg-top-wrap,
+//.form-reg-bot-wrap {
+//  display: flex;
+//  justify-content: space-between;
+//  width: 100%;
+//  input, select {
+//    //display: block;
+//  }
+//  input,
+//  .select-city-wrap,
+//  .reg-birthday-wrap {
+//    flex-basis: 45%;
+//  }
+//}
+//.reg-checked {
+//  padding-bottom: 33px;
+//  input {
+//    margin-bottom: 0;
+//  }
+//  line-height: 1;
+//}
+//@media (max-width: 1368px) {
+//  #registration-page .container {
+//    padding-top: 168px;
+//  }
+//  .subtitle-reg {
+//
+//    //padding-top: calc(198px + (198 - 178) * (100vw - 1368px) / (1368 - 320));
+//    font-size: calc(48px + (48 - 38) * (100vw - 1368px) / (1368 - 320));
+//  }
+//  .title-reg {
+//    font-size: calc(77px + (77 - 27) * (100vw - 1368px) / (1368 - 320));
+//  }
+//  .form-reg-wrap {
+//    //height: max-content;
+//    .select-city-wrap,
+//    .way_of_visiting-wrap {
+//      &:after {
+//        top: 18px;
+//      }
+//    }
+//    button {
+//      font-size: calc(24px + (24 - 12) * (100vw - 1368px) / (1368 - 320));
+//    }
+//  }
+//  .form-reg-wrap {
+//    input, select {
+//      font-size: calc(24px + (24 - 14) * (100vw - 1368px) / (1368 - 320));
+//    }
+//  }
+//}
+//@media (max-width: 1368px) {
+//  #registration-page .container {
+//    padding-top: 178px;
+//  }
+//  .subtitle-reg {
+//  }
+//}
+//@media (max-width: 768px) {
+//  #registration-page {
+//    height: -webkit-fit-content;
+//    height: -moz-fit-content;
+//    height: fit-content;
+//  }
+//  .reg-checked {
+//    display: block;
+//  }
+//  .g-recaptcha {
+//    overflow: hidden!important;
+//    width: auto!important;
+//    max-width: 100%!important;
+//  }
+//}
+//@media (max-width: 550px) {
+//  .form-reg-top-wrap,
+//  .form-reg-bot-wrap {
+//    display: flex;
+//    flex-direction: column;
+//    input, select {
+//      flex-basis: 100%;
+//    }
+//    .reg-birthday-wrap {
+//      position: relative;
+//      margin-bottom: 16px;
+//      &:after {
+//        content: "▼";
+//        position: absolute;
+//        color: #000;
+//        background: transparent;
+//        right: 32px;
+//        top: 22px;
+//        z-index: 2;
+//      }
+//    }
+//    #reg-birthday {
+//      -webkit-appearance: none;
+//      -moz-appearance: none;
+//      appearance: none;
+//
+//      &::placeholder,
+//      &:-moz-placeholder,
+//      &::-webkit-input-placeholder {
+//        color: #000!important;
+//      }
+//      margin-bottom: 0;
+//      width: 100%;
+//    }
+//  }
+//  .form-reg-wrap {
+//    button {
+//      width: 100%;
+//      border-radius: 26px;
+//    }
+//  }
+//}
+//
