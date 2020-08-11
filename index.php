@@ -7,15 +7,42 @@ $subdir = trim(substr($script_dir1, strlen($script_dir2)), "/\\");
 $request_scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
 
 $site_url = $request_scheme.'://'.$_SERVER['HTTP_HOST'].'/';
-//var_dump($subdir,2323);exit();
+//echo "<pre>";
+//var_dump($_SERVER);exit();
+//var_dump(substr($_SERVER['REQUEST_URI'], 0, strpos($request, '?')););
+//exit();
+
 if(!empty($subdir)){
 	$site_url .= $subdir.'/';
 	$request = substr($_SERVER['REQUEST_URI'], strlen('/'.$subdir));
 } else {
 	$request = $_SERVER['REQUEST_URI'];
 }
+//var_dump($_SERVER);exit();
+
+
+//if((strpos($request, '?')) !== false ) {
+//	$request = substr($request, 0, strpos($request, '?'));
+//	$site_url .= $subdir.'/'.$request;
+//} else {
+//	if(!empty($subdir)){
+//		$site_url .= $subdir.'/';
+//		$request = substr($_SERVER['REQUEST_URI'], strlen('/'.$subdir));
+//	} else {
+//		$request = $_SERVER['REQUEST_URI'];
+//	}
+//}
+
 //var_dump($request);
-if($request === '/') $request = '/main';
+if($request === '/') $request = 'main';
+if($request[0] === '/' && $request[12] === 'n' && $request[13] === '?') $request = 'registration';
+if($request[0] === '/' && $request[1] === '?') $request = 'main';
+$pages = ["registration", "gift", "fanpark", "scene", "city"];
+foreach($pages as $p){
+	if(strpos($request, $p) !== false && strpos($request, '?') !== false){
+		$request = $p;
+	}
+}
 $path = 'pages/'.$request.'.php';
 //var_dump($request);
 if(!file_exists($path)){
@@ -24,6 +51,9 @@ if(!file_exists($path)){
 if($request === '/404'){
     header($_SERVER["SERVER_PROTOCOL"]." 404 not found");
 }
+
+
+
 define('SITE_URL', $site_url);
 define('PAGE', basename($path, '.php'));
 // Ключ (Добавьте этот ключ в HTML-код сайта.)

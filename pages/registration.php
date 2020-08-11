@@ -31,9 +31,11 @@
 				<!-- action="./api/register.php" -->
 				<form id="register_form"  method="post">
 					<div class="form-reg-top-wrap">
-						<input id="registration-name" type="text" name="name" placeholder="ФИО *" required>
-						<input id="registration-phone" type="tel" name="phone" placeholder="+7 (000) 000 - 00 - 00" required>
+						<input id="registration-name" type="text" name="surname" placeholder="Имя *" required>
+						<input id="" type="text" name="name" placeholder="Фамилия *" required>
 					</div>
+					<input type="text" name="middle_name" placeholder="Отчество *" required>
+					<input id="registration-phone" type="tel" name="phone" placeholder="+7 (000) 000 - 00 - 00" required>
 					<input type="text" name="email" placeholder="Ваш @mail *" required>
 
 					<div class="form-reg-bot-wrap">

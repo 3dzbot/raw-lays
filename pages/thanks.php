@@ -52,8 +52,8 @@
 				<p class="thanks-content-title">Твой билет в LAY'S & PEPSI DRIVE PARK отправлен на указанный почтовый адрес.</p>
 				<p class="thanks-content-second">Смотрим Финал Лиги чемпионов 23 августа
 					вместе с LAY’S и Pepsi в Лужниках!</p>
-				<p>СК “Лужники”, Южное спортивное ядро,
-					парковка Р-18. </p>
+				<a href="https://www.google.com/maps/place/55°42'51.3%22N+37°33'45.4%22E/@55.7142525,37.5604105,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d55.7142525!4d37.5625992?hl=ru" title="посмотреть на яндекс-карте">СК “Лужники”, Южное спортивное ядро,
+					парковка Р-18. </a>
             </div>
             <a href="#" class="thanks-btn main-square-registration">На главную</a>
         </div>

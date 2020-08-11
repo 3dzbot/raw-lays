@@ -51,6 +51,12 @@
     margin: 0 auto 30px;
     max-width: 640px;
   }
+  a {
+    display: inline-block;
+    text-decoration: underline;
+    color: #fff;
+
+  }
   .thanks-content-second {
     max-width: 700px;
   }
@@ -145,6 +151,18 @@
   .thanks-content {
     font-size: calc(24px + (24 - 18) * (100vw - 768px) / (768 - 320));
   }
+  .thanks-container {
+    text-shadow: 0 0 3px rgb(0,0,0);
+    .main-square-title {
+
+    }
+  }
+.thanks-right {
+  .thanks-title,
+  .thanks-content {
+    text-shadow: 0 0 3px rgba(0, 0, 0, 1);
+  }
+}
 }
 @media (max-width: 668px) {
   .thanks {
